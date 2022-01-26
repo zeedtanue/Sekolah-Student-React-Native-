@@ -1,23 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import { Icon, Input } from 'native-base';
-import { Text, View, Image, TextInput } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import styles  from './Login.Styles'
+import { View } from 'react-native';
+import LongRoundButton from '../../Components/Buttons/LongRoundButton';
+import InputWithIcon from '../../Components/Inputs/InputWithIcon';
+import SmallText from '../../Components/Links/SmallText';
+import BlueLogo from '../../Components/Logos/BlueLogo';
+import loginStyles  from './Login.Styles'
 export default function Login() {
   return (
-    <View style={styles.container}>
-      <View style={styles.logo}>
-        <Image source={require('../../../assets/logo-blue.png')} style={styles.image} resizeMode="contain" />
-      </View>
-      
-
-    
-      <TextInput
-        variant="underlined"
-        placeholder='Username'
-        />
-      <Text style={styles.text}>Shikkha appsssss</Text>
+    <View style={loginStyles.container}>
       <StatusBar style="auto" />
+      <View style={loginStyles.logoContainer} >
+        <BlueLogo/>
+      </View>
+
+      <View style={loginStyles.inputContainer}>
+      <InputWithIcon
+            icon='person'
+            placeholder= 'UserName'
+        />
+        <InputWithIcon
+            securityTextEntry={true}
+            icon='lock-closed'
+            placeholder='Password'
+        />
+      </View>
+
+      <View style={loginStyles.buttonContainer}>
+        <LongRoundButton title='Sign In'/>
+      </View>
+
+      <View style={loginStyles.smallTextContainer}>
+        <SmallText title='Forgot Password?'/>
+      </View>
     </View>
   );
 }

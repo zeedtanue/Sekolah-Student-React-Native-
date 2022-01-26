@@ -12,7 +12,7 @@ export default function App() {
   return (
     <NativeBaseProvider config={config}>
       <Center flex={1}>
-        <Test/>
+        <Login/>
         {/* <Test/> */}
 
       </Center>

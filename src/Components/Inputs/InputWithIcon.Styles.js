@@ -5,6 +5,7 @@ const inputIconStyles = StyleSheet.create({
         flex: 1,
         maxHeight: hp('8%'),
         width: wp('60%'),
+        marginBottom: hp('1%')
 
     },
     inputSection: {
