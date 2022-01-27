@@ -1,26 +1,26 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Text } from 'react-native';
-import { TextInput } from 'react-native-web';
-import LongRoundButton from '../Components/Buttons/LongRoundButton';
-import InputWithIcon from '../Components/Inputs/InputWithIcon';
-import SmallText from '../Components/Links/SmallText';
-import BlueLogo from '../Components/Logos/BlueLogo'
+import TopBlue from '../Components/Backgrounds/TopBlue'
+import WhiteLogo from '../Components/Logos/WhiteLogo';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export default function Login() {
   return (
     <View>
-        <BlueLogo/>
-        <InputWithIcon
-            icon='person'
-            placeholder= 'UserName'
-        />
-        <InputWithIcon
-            securityTextEntry={true}
-            icon='lock-closed'
-            placeholder='Password'
-        />
-        <LongRoundButton title="Sign In"/>
-        <SmallText title='Forgot Password?'/>
+        <TopBlue>
+            <View>
+                <View>
+                    <WhiteLogo/>
+                </View>
+
+                <View>
+                    <FontAwesome5 name="bell" size={24} color="black" />
+                </View>
+            </View>
+            <WhiteLogo/>
+            <WhiteLogo/>
+            <Text>Hi</Text>
+        </TopBlue>
     </View>
   );
 }
