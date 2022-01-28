@@ -21,6 +21,17 @@ const studentHomeStyles = StyleSheet.create({
         marginLeft: wp('60%'),
         marginRight: wp('4%'),
         marginTop: hp('3%')
+    },
+    scrollContainer: {
+        width: wp('100%'),
+        height: hp('66%'),
+        position: 'absolute',
+        top: hp('33%')
+    },
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-evenly',
+        padding: hp('2%')
     }
     
   });
