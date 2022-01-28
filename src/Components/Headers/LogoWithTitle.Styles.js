@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const logoWithTitleStyles = StyleSheet.create({
   header: {
-    marginTop: -hp('42%'),
+    
     position: 'absolute',
     left: 0,
     top: 0,
@@ -11,7 +11,7 @@ const logoWithTitleStyles = StyleSheet.create({
     flexDirection: 'row'
   },
   logo: {
-    marginLeft: wp('4%')
+    marginLeft: wp('3%')
   },
   
   title: {
