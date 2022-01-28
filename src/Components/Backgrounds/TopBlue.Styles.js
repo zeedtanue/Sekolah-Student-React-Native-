@@ -4,7 +4,8 @@ const topBlueStyles = StyleSheet.create({
     container: {
         flex: 1,
         width: wp('100%'),
-        height: hp('30%'),
+        height: hp('33%'),
+        top: -hp('3%'),
         justifyContent: "center"
     }
   });

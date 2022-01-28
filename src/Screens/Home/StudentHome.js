@@ -13,6 +13,8 @@ const StudentHome = () => {
         <TopBlue>
             <LogoWithBell title="Silver Lining Grammar School"/>
             <ScrollView style={studentHomeStyles.scrollContainer}>
+                {/* Notice */}
+                <Text style={studentHomeStyles.notice} >Some Notice from the school</Text>
                 <View style={studentHomeStyles.buttonContainer}>
                     <RectangleButton
                       background="primary" 

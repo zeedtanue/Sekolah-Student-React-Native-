@@ -13,7 +13,7 @@ const LogoWithBell = ({ title }) => {
                     <WhiteLogo/>
                 </View>
                 <View style={headerWithBellStyles.icon}>
-                    <FontAwesome5 name="bell" size={24} color="black" />
+                    <FontAwesome5 name="bell" size={26} color="black" />
                 </View>
               </View>
               <Text style={headerWithBellStyles.title}>{ title }</Text>

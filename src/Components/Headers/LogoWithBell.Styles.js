@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const headerWithBellStyles = StyleSheet.create({
   header: {
-    marginTop: -hp('45%'),
+    marginTop: -hp('42%'),
     position: 'absolute',
     left: 0,
     top: 0,

@@ -1,26 +1,11 @@
 import { StyleSheet } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-const studentHomeStyles = StyleSheet.create({
+const assignmentHomeStyles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
-    },
-    header: {
-        flexDirection: 'row',
-        marginTop: hp('5%'),
-        position: 'absolute',
-        left: 0,
-        top: 0,
-    },
-    logo: {
-        marginLeft: wp('3%')
-    },
-    icon: {
-        marginLeft: wp('60%'),
-        marginRight: wp('4%'),
-        marginTop: hp('3%')
     },
     notice: {
         fontSize: hp('2.5%'),
@@ -37,10 +22,12 @@ const studentHomeStyles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
+        alignContent: 'center',
         justifyContent: 'space-evenly',
-        padding: hp('2%')
+        padding: hp('2%'),
+        paddingTop: hp('15%')
     }
     
   });
-  export default studentHomeStyles
+  export default assignmentHomeStyles
 

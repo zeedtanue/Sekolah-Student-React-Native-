@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { Center, NativeBaseProvider } from 'native-base';
+import AssignmentHome from './src/Screens/Assignments/AssignmentHome';
 import Login from './src/Screens/Authentication/Login'
+import ClassHome from './src/Screens/Class/ClassHome';
 import StudentHome from './src/Screens/Home/StudentHome';
 import Test from './src/Screens/Test'
 
@@ -14,8 +16,9 @@ export default function App() {
     <NativeBaseProvider config={config}>
       <Center flex={1}>
         {/* <Login/> */}
-        <StudentHome/>
-
+        {/* <StudentHome/> */}
+        {/* <ClassHome/> */}
+        <AssignmentHome/>
       </Center>
     </NativeBaseProvider>
   );
