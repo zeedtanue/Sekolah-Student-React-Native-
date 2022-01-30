@@ -6,7 +6,10 @@ import studentHomeStyles from "./StudentHome.Styles";
 import LogoWithBell from "../../Components/Headers/LogoWithBell";
 import RectangleButton from "../../Components/Buttons/RectangleButton";
 
-const StudentHome = () => {
+const StudentHome = ({ navigation }) => {
+    const assignmentFunc = () => {
+        navigation.navigate('AssignmentHome')
+    }
     return (
       <View style={studentHomeStyles.container}>
         <StatusBar style="auto" />
@@ -40,6 +43,7 @@ const StudentHome = () => {
                     <RectangleButton
                       background="primary" 
                       icon={require('../../../assets/assignmentIcon.png')}
+                      onPress={assignmentFunc}
                       title="Assignments"/>
                     <RectangleButton
                       background="secondary" 

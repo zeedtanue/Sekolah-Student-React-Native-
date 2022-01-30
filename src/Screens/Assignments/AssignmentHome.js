@@ -6,7 +6,7 @@ import assignmentHomeStyles from "./AssignmentHome.Styles";
 import LogoWithBell from "../../Components/Headers/LogoWithBell";
 import RectangleButton from "../../Components/Buttons/RectangleButton";
 
-const AssignmentHome = () => {
+const AssignmentHome = ({ navigation }) => {
     return (
       <View style={assignmentHomeStyles.container}>
         <StatusBar style="auto" />
