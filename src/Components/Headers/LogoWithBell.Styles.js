@@ -21,7 +21,7 @@ const headerWithBellStyles = StyleSheet.create({
   title: {
     alignSelf: 'center',
     fontWeight: 'bold',
-    fontSize: hp('3.5%'),
+    fontSize: wp('6.5%'),
     marginTop: -hp('4%'),
     paddingLeft: wp('3%'),
     paddingRight: wp('3%')

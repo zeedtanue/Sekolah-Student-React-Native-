@@ -31,7 +31,7 @@ const studentHomeStyles = StyleSheet.create({
     },
     scrollContainer: {
         width: wp('100%'),
-        height: hp('66%'),
+        height: hp('70%'),
         position: 'absolute',
         top: hp('33%')
     },

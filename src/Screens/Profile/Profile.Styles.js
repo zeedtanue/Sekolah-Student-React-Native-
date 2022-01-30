@@ -8,7 +8,7 @@ const profileStyles = StyleSheet.create({
       justifyContent: 'center',
     },
     header: {
-        marginTop: hp('8%'),
+        marginTop: hp('4%'),
         position: 'absolute',
         top: 0,
         left: 0
