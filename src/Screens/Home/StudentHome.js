@@ -10,6 +10,9 @@ const StudentHome = ({ navigation }) => {
     const assignmentFunc = () => {
         navigation.navigate('AssignmentHome')
     }
+    const classFunc = () => {
+        navigation.navigate('ClassHome')
+    }
     return (
       <View style={studentHomeStyles.container}>
         <StatusBar style="auto" />
@@ -22,7 +25,9 @@ const StudentHome = ({ navigation }) => {
                     <RectangleButton
                       background="primary" 
                       icon={require('../../../assets/class-icon.png')}
-                      title="Class"/>
+                      title="Class"
+                      onPress={classFunc}
+                      />
                     <RectangleButton
                       background="secondary" 
                       icon={require('../../../assets/book-icon.png')}
