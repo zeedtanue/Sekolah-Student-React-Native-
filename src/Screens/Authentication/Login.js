@@ -30,7 +30,7 @@ export default function Login() {
       </View>
 
       <View style={loginStyles.smallTextContainer}>
-        <SmallText title='Forgot Password?'/>
+        <SmallText title='Forgot Password?' onPress={() => alert("Please contact admin ")}/>
       </View>
     </View>
   );

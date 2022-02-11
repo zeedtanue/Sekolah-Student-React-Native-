@@ -40,7 +40,8 @@ export default function App() {
     // </Center>
     // </NativeBaseProvider>
     <NativeBaseProvider config={config}>
-      <BottomTabContainer/>
+      <Login/>
+      {/* <BottomTabContainer/> */}
 
     </NativeBaseProvider>
   );
