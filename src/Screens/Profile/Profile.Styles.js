@@ -15,9 +15,9 @@ const profileStyles = StyleSheet.create({
     },
     
     infoContainer: {
-        height: hp('80%'),
+        height: hp('75%'),
         width: wp('90%'),
-        top: hp('8%'),
+        top: hp('14%'),
         paddingLeft: wp('5%'),
         paddingRight: wp('5%')       
     },

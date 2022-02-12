@@ -7,6 +7,7 @@ import LogoWithBell from "../../Components/Headers/LogoWithBell";
 import RectangleButton from "../../Components/Buttons/RectangleButton";
 
 const StudentHome = ({ navigation }) => {
+
     const assignmentFunc = () => {
         navigation.navigate('AssignmentHome')
     }
@@ -17,7 +18,7 @@ const StudentHome = ({ navigation }) => {
       <View style={studentHomeStyles.container}>
         <StatusBar style="auto" />
         <TopBlue>
-            <LogoWithBell title="Silver Lining Grammar School"/>
+            <LogoWithBell/>
             <ScrollView style={studentHomeStyles.scrollContainer}>
                 {/* Notice */}
                 <Text style={studentHomeStyles.notice} >Some Notice from the school</Text>

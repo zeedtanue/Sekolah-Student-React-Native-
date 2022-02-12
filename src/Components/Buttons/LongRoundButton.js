@@ -1,4 +1,3 @@
-import { Button } from "native-base";
 import React from "react";
 import { View, Text, TouchableHighlight} from 'react-native'
 import longButtonStyles from "./LongRoundButton.Styles";

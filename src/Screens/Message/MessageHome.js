@@ -1,5 +1,4 @@
 import { StatusBar } from "expo-status-bar";
-import { CheckIcon, Select } from "native-base";
 import React from "react";
 import { View, Text, ScrollView, TextInput } from "react-native";
 import LogoWithTitle from "../../Components/Headers/LogoWithTitle";
