@@ -6,7 +6,10 @@ import classHomeStyles from "./ClassHome.Styles";
 import LogoWithBell from "../../Components/Headers/LogoWithBell";
 import RectangleButton from "../../Components/Buttons/RectangleButton";
 
-const ClassHome = () => {
+const ClassHome = ({navigation}) => {
+    const navigateLiveClass= () => {
+      navigation.navigate('LiveClass')
+    }
     return (
       <View style={classHomeStyles.container}>
         <StatusBar style="auto" />
@@ -18,11 +21,16 @@ const ClassHome = () => {
                     <RectangleButton
                       background="primary" 
                       icon={require('../../../assets/webinar-icon.png')}
-                      title="Live Class"/>
+                      title="Live Class"
+                      onPress={()=> navigation.navigate('LiveClass')}
+
+                      />
                     <RectangleButton
                       background="secondary" 
                       icon={require('../../../assets/presentation-icon.png')}
-                      title="Class lecture"/>
+                      title="Class lecture"
+                      onPress={() => navigation.navigate('ClassLecture')}
+                      />
                     
                 </View>
                 
