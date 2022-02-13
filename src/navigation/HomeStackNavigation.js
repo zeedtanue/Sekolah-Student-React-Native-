@@ -7,6 +7,7 @@ import ClassHome from "../Screens/Class/ClassHome";
 import LiveClass from "../Screens/Class/LiveClass";
 import ClassLecture from "../Screens/Class/ClassLecture";
 import LectureDetails from "../Screens/Class/LectureDetails";
+import SyllabusHome from "../Screens/Syllabus/SyllabusHome";
 const { Navigator, Screen } = createNativeStackNavigator()
 const HomeStackNavigation = () => {
     
@@ -20,6 +21,7 @@ const HomeStackNavigation = () => {
             <Screen name="LiveClass" component={LiveClass}/>
             <Screen name="ClassLecture" component={ClassLecture}/>
             <Screen name="LectureDetails" component={LectureDetails}/>
+            <Screen name="SyllabusHome" component={SyllabusHome}/>
 
         </Navigator>
     )

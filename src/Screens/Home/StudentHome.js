@@ -14,6 +14,9 @@ const StudentHome = ({ navigation }) => {
     const classFunc = () => {
         navigation.navigate('ClassHome')
     }
+    const syllabusFunc = () => {
+      navigation.navigate('SyllabusHome')
+    }
     return (
       <View style={studentHomeStyles.container}>
         <StatusBar style="auto" />
@@ -32,7 +35,9 @@ const StudentHome = ({ navigation }) => {
                     <RectangleButton
                       background="secondary" 
                       icon={require('../../../assets/book-icon.png')}
-                      title="Syllabus"/>
+                      title="Syllabus"
+                      onPress={syllabusFunc}
+                      />
                     
                 </View>
                 <View style={studentHomeStyles.buttonContainer}>
