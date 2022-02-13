@@ -17,6 +17,15 @@ const StudentHome = ({ navigation }) => {
     const syllabusFunc = () => {
       navigation.navigate('SyllabusHome')
     }
+    const classRoutineFunc = () => {
+      navigation.navigate('ClassRoutine')
+    }
+    const examRoutine = () => {
+      navigation.navigate('ExamRoutine')
+    }
+    const noticeRoute = () => {
+      navigation.navigate('Notice')
+    }
     return (
       <View style={studentHomeStyles.container}>
         <StatusBar style="auto" />
@@ -44,11 +53,15 @@ const StudentHome = ({ navigation }) => {
                     <RectangleButton
                       background="secondary" 
                       icon={require('../../../assets/clipboard-icon.png')}
-                      title="Class Routine"/>
+                      title="Class Routine"
+                      onPress={classRoutineFunc}
+                      />
                     <RectangleButton
                       background="primary" 
                       icon={require('../../../assets/timetable-icon.png')}
-                      title="Exam Routine"/>
+                      title="Exam Routine"
+                      onPress={examRoutine}
+                      />
                 </View>
                 <View style={studentHomeStyles.buttonContainer}>
                     <RectangleButton
@@ -59,7 +72,9 @@ const StudentHome = ({ navigation }) => {
                     <RectangleButton
                       background="secondary" 
                       icon={require('../../../assets/noticeboard-icon.png')}
-                      title="Notice"/>
+                      title="Notice"
+                      onPress={noticeRoute}
+                      />
                 </View>
                 <View style={studentHomeStyles.buttonContainer}>
                     <RectangleButton
