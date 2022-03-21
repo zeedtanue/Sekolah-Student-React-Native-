@@ -20,7 +20,9 @@ const logoWithTitleStyles = StyleSheet.create({
     fontSize: hp('2.7%'),
     marginTop: -hp('1%'),
     paddingLeft: wp('2%'),
-    paddingRight: wp('2%')
+    paddingRight: wp('2%'),
+    maxWidth: wp('80%'),
+    textAlign: 'center'
   }
   });
   export default logoWithTitleStyles

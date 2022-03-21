@@ -11,6 +11,13 @@ import SyllabusHome from "../Screens/Syllabus/SyllabusHome";
 import ClassRoutine from "../Screens/Routine/ClassRoutine";
 import ExamRoutine from "../Screens/Routine/ExamRoutin";
 import Notice from "../Screens/Notice/Notice";
+import ClassRoutinDetails from "../Screens/Routine/ClassRoutinDetails";
+import Task from "../Screens/Assignments/Task";
+import Submission from "../Screens/Assignments/Submission";
+import Accounts from "../Screens/Accounts/Accounts";
+import AccountsDetails from "../Screens/Accounts/AccountsDetails";
+import NoticeDetails from "../Screens/Notice/NoticeDetails";
+import SyllabusDetails from "../Screens/Syllabus/SyllabusDetails";
 const { Navigator, Screen } = createNativeStackNavigator()
 const HomeStackNavigation = () => {
     
@@ -28,7 +35,13 @@ const HomeStackNavigation = () => {
             <Screen name="ClassRoutine" component={ClassRoutine}/>
             <Screen name="ExamRoutine" component={ExamRoutine} />
             <Screen name="Notice" component={Notice}/>
-
+            <Screen name="ClassRoutineDetails" component={ClassRoutinDetails}/>
+            <Screen name="Task" component={Task}/>
+            <Screen name="SubmissionTask" component={Submission}/>
+            <Screen name="Accounts" component={Accounts}/>
+            <Screen name="AccountsDetails" component={AccountsDetails}/>
+            <Screen name="NoticeDetails" component={NoticeDetails}/>
+            <Screen name="SyllabusDetails" component={SyllabusDetails}/>
         </Navigator>
     )
 }

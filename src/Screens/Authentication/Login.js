@@ -6,18 +6,28 @@ import InputWithIcon from '../../Components/Inputs/InputWithIcon';
 import SmallText from '../../Components/Links/SmallText';
 import BlueLogo from '../../Components/Logos/BlueLogo';
 import { AuthContext } from '../../Utilities/AuthContext';
+import { useToast } from 'native-base';
 import loginStyles  from './Login.Styles'
 export default function Login() {
-
+  const toast =  useToast()
   const [userName, setUserName] = useState('')
   const [password, setPassword] = useState('')
+  const [loadingState, setLoadingState] = useState(false)
+
 
   const { login } = useContext(AuthContext)
 
   const onPressHandle = async() => {
     try {
+      setLoadingState(true)
       await login( userName, password )
     } catch (error) {
+      setLoadingState(false)
+      toast.show({
+        title: "Invalid username/password",
+        status: "warning",
+        description: "Please enter a valid username and password"
+      })
       console.log(error)
     }
   }
@@ -43,11 +53,13 @@ export default function Login() {
       </View>
 
       <View style={loginStyles.buttonContainer}>
-        <LongRoundButton title='Sign In' onPress={()=> onPressHandle() }/>
+        <LongRoundButton loading={loadingState} title='Sign In' onPress={()=> onPressHandle() }/>
       </View>
 
       <View style={loginStyles.smallTextContainer}>
-        <SmallText title='Forgot Password?' onPress={() => alert("Please contact admin ")}/>
+        <SmallText title='Forgot Password?' onPress={() => toast.show({
+          description: "Please Contact Admin"
+        })}/>
       </View>
     </View>
   );

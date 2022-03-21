@@ -11,7 +11,7 @@ const smallButtonIconStyles = StyleSheet.create({
     text: {
         color: 'white',
         fontWeight: 'bold',
-        fontSize:hp('2.2%'),
+        fontSize:hp('1.5%'),
         marginLeft: -wp('1.5%')
     }
    

@@ -17,13 +17,13 @@ const noticeStyles = StyleSheet.create({
         height: hp('75%'),
         width: wp('95%'),
         top: hp('14%'),
-        paddingLeft: wp('5%'),
-        paddingRight: wp('5%')       
+        marginLeft: wp('5%'),
+        marginRight: wp('5%')       
     },
     title: {
         position: 'absolute',
         fontWeight: 'bold',
-        marginLeft: -wp('3%'),
+        marginLeft: wp('3%'),
         fontSize: hp('3%'),
     },
     cardContainer: {

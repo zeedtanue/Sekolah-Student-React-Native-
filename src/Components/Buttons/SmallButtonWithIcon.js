@@ -9,8 +9,7 @@ const SmallButtonWithIcon = ({ onPress, buttonTitle, icon }) => {
     <View>
         <Button 
           variant="solid" 
-          leftIcon={ <AntDesign name={icon} size={20} color="white" />}
-          size="sm"
+          leftIcon={ <AntDesign name={icon} size={15} color="white" />}
           onPress={ onPress }
           >
             <Text style={smallButtonIconStyles.text}>

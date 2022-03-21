@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios';
 import { AsyncStorage } from 'react-native';
 import qs from 'qs'
-import { BASE_URL } from '../Config';
 import {createAction} from './createAction';
 import {sleep} from './sleep';
 
@@ -38,23 +37,38 @@ export function useAuth() {
     () => ({
         login: async (userName, password) => {
           const query = { email: userName, password: password}
+
+          const config = {
+            method: 'GET',
+            headers: { 'content-type': 'application/json' },
+            url: `http://demoscl.xyz/schoolapi/user/${userName}`
+          }
+          
+          const urlInfo = await axios(config)
+          const baseUrl = urlInfo.data[0].url 
           const form = {
-                method: 'GET',
-                headers: { 'content-type': 'application/json' },
-                url: BASE_URL+`login?email=${userName}&password=${password}`
-                };
+            method: 'GET',
+            headers: { 'content-type': 'application/json' },
+            url: baseUrl+`api/login?email=${userName}&password=${password}`
+            };
           const {data} = await axios(form);
+          // console.log(data)
+          console.log(urlInfo.data[0].url)
+
           const info = data.data.userDetails
           const user = {
+            base_url: baseUrl,
             fullName: info.full_name,
             image: info.student_photo,
             email: info.email,
+            studentId: data.data.user.id,
             rollNo: info.roll_no,
             className: info.class_name,
             sectionName: info.section_name,
             guardianName: info.guardians_name,
             gurdianMobileNumber: info.guardians_mobile,
-            schoolName: data.data.system_settings[0].school_name
+            schoolName: data.data.system_settings[0].school_name,
+            token: data.data.accessToken
 
           };
 

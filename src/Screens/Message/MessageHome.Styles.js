@@ -16,9 +16,10 @@ const messageHomeStyles = StyleSheet.create({
     infoContainer: {
         height: hp('80%'),
         width: wp('90%'),
-        top: hp('8%'),
+        top: hp('15%'),
         paddingLeft: wp('5%'),
         paddingRight: wp('5%'),
+        alignItems:'center'
     },
     title: {
         position: 'absolute',

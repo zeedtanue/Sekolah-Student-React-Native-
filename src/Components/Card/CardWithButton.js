@@ -23,15 +23,22 @@ const CardWithButton = ({ onPress,
         <View style={CardWithButtonStyles.contentContainer}>
             <Text style={cardWithButtonStyles.title}>{title}</Text>
             <Text style={cardWithButtonStyles.content}>{subtitle1}</Text>
+            {subtitle2 !== ''? 
             <Text style={cardWithButtonStyles.content}>{subtitle2}</Text>
+              : null
+            }
         </View>
         <View style={cardWithButtonStyles.button}>
             <SmallButtonWithIcon onPress={ onPress } buttonTitle={buttonTitle} icon={icon} />
         </View>
     </View>
     <View style={cardWithButtonStyles.footer}>
-      <Text style={cardWithButtonStyles.content}>{footer1}</Text>
-      <Text style={cardWithButtonStyles.content}>{footer2}</Text>
+      {footer1 !== ''? 
+        <Text style={cardWithButtonStyles.content}>{footer1}</Text>: null      
+      }
+      {footer2 !== ''?
+        <Text style={cardWithButtonStyles.content}>{footer2}</Text>: null
+      }
     </View>
     </View>
   )

@@ -11,6 +11,10 @@ const longButtonStyles = StyleSheet.create({
     },
     text: {
         fontSize: hp('2%')
+    },
+    row: {
+        display: 'flex',
+        flexDirection: 'row'
     }
   });
   export default longButtonStyles

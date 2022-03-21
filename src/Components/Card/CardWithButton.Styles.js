@@ -6,14 +6,14 @@ const cardWithButtonStyles = StyleSheet.create({
         borderRadius: wp('3%'),
         width:wp('94%'),
         minHeight: hp('10%'),
-        padding: wp('3%')
+        padding: wp('3%')   
     },
     title: {
-        fontSize: hp('2%'),
+        fontSize: hp('1.5%'),
         fontWeight: 'bold'
     },
     content: {
-        fontSize: hp('1.8%'),
+        fontSize: hp('1.5%'),
         paddingTop: hp('2%')
     },
     contentContainer: {
@@ -23,12 +23,13 @@ const cardWithButtonStyles = StyleSheet.create({
         flexDirection: 'row'
     },
     button: {
-        alignSelf: 'center'
+        alignSelf: 'center',
+        marginLeft:wp('-6%')
     },
     footer: {
         flexDirection:'row',
         justifyContent: 'space-between',
-        paddingRight:wp('15%')
+        paddingRight:wp('5%')
     }
     
   });

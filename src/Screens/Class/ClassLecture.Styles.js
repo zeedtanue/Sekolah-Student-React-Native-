@@ -4,8 +4,19 @@ const classLectureStyles = StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: '#fff',
-      alignItems: 'center',
-      justifyContent: 'center',
+    },
+    title: {
+      marginTop: hp('5%')
+    },
+    textTitle: {
+      fontWeight: 'bold',
+      fontSize: hp('3%'),
+      marginTop: hp('10%'),
+      marginLeft: wp('5%')
+    },
+    cardContainer: {
+      marginTop: hp('2%'),
+      alignSelf: 'center'
     }
     
   });

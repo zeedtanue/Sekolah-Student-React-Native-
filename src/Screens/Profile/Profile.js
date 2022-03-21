@@ -18,23 +18,24 @@ const Profile = () => {
       </View>
       <ScrollView style={profileStyles.infoContainer}>
         <Text style={profileStyles.title}> Profile </Text>
-        {user.image !=='' ?
+        {/* {user.image =='' ? */}
           <Avatar 
             bg="#ffffff" 
             alignSelf="center" 
             size="xl" 
             source={require('../../../assets/avatar-logo.png')}
             style={profileStyles.avatar}>
-          </Avatar>:
+          </Avatar>
+          {/* :
           <Avatar 
             bg="#ffffff" 
             alignSelf="center" 
             size="xl" 
             source={{uri: user.image}}
             style={profileStyles.avatar}>
-          </Avatar>
+          </Avatar> */}
 
-      }
+      {/* } */}
         
         <View style={profileStyles.divider}></View>
         

@@ -39,6 +39,8 @@ const MessageHome = ({ navigation }) => {
         <View style={messageHomeStyles.infoContainer}>
             <ScrollView>
                 <View>
+                <Text>Upocoming</Text>
+
                     {/* <Select 
                       minWidth="200" 
                       placeholder="--Reciever Type*--"
@@ -53,7 +55,6 @@ const MessageHome = ({ navigation }) => {
                 </View>
             </ScrollView>
         </View>
-        <Text>Hi</Text>
       </View>
     )
     

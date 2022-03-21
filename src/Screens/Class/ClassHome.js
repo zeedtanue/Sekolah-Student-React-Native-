@@ -28,7 +28,7 @@ const ClassHome = ({navigation}) => {
                     <RectangleButton
                       background="secondary" 
                       icon={require('../../../assets/presentation-icon.png')}
-                      title="Class lecture"
+                      title="Class Lecture"
                       onPress={() => navigation.navigate('ClassLecture')}
                       />
                     

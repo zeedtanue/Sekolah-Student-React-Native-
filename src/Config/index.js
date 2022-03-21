@@ -1,1 +1,1 @@
-export const BASE_URL = 'http://demo.shikkhaapp.com/api/';
+export const BASE_URL = 'http://moonlightkindergarten.com/';

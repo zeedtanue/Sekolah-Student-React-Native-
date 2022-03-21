@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "254756809333",
+    "project_id": "shikkha-app-student",
+    "storage_bucket": "shikkha-app-student.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254756809333:android:acc6980eeb510b573ce63c",
+        "android_client_info": {
+          "package_name": "com.sourcecode.shikkhastudent"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254756809333-uob0agufo7j62a3s4h4manoa9d1t084p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuSnGewPx426564USyKN4s-DUaAgBBvT0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254756809333-uob0agufo7j62a3s4h4manoa9d1t084p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

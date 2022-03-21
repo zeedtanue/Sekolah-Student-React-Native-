@@ -18,11 +18,10 @@ const AssignmentHome = ({ navigation }) => {
                     <RectangleButton
                       background="primary" 
                       icon={require('../../../assets/task-icon.png')}
-                      title="Task"/>
-                    <RectangleButton
-                      background="secondary" 
-                      icon={require('../../../assets/submission-icon.png')}
-                      title="Submission"/>
+                      title="Task and Submission"
+                      onPress={()=> navigation.navigate('Task')}
+                      />
+                    
                     
                 </View>
                 

@@ -8,7 +8,8 @@ const headerWithBellStyles = StyleSheet.create({
     top: 0,
     },
   top: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    paddingTop: hp('4%')
   },
   logo: {
     marginLeft: wp('3%')
@@ -24,7 +25,8 @@ const headerWithBellStyles = StyleSheet.create({
     fontSize: wp('6.5%'),
     marginTop: -hp('4%'),
     paddingLeft: wp('3%'),
-    paddingRight: wp('3%')
+    paddingRight: wp('3%'),
+    textAlign: 'center',
   }
   });
   export default headerWithBellStyles
