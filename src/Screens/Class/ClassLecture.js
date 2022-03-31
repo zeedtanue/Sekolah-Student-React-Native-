@@ -30,9 +30,13 @@ const ClassLecture = ({ navigation }) => {
       const { uploadContents } = data.data
       const result = uploadContents.filter(filterByClass)
       setClassLecture([...result])
-      console.log(result)
+      console.log(data)
+      console.log(config)
       setLoading(false)
     } catch (error) {
+      console.log(error)
+      console.log(config)
+
       setLoading(false)
       
     }

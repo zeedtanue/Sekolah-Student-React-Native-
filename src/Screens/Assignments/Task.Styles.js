@@ -17,6 +17,12 @@ const taskStyles = StyleSheet.create({
     cardContainer: {
       marginTop: hp('3%'),
       alignSelf: 'center'
+  },
+  emptyArray: {
+    paddingTop:30,
+    justifyContent: 'center',
+    alignSelf: 'center',
+    fontSize: hp('2%')
   }
     
   });

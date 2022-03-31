@@ -35,6 +35,17 @@ const examRoutineStyles = StyleSheet.create({
     rowText: {
       margin: 6,
       fontSize: hp('1%') 
+    },
+    buttonList:{
+      borderWidth: 0.2,
+      borderRadius: 10,
+      marginTop: 10,
+      backgroundColor: '#FFF2F2',
+      padding: hp('1.2%'),
+    },
+    buttonText: {
+      fontSize: hp('1.8%'),
+      paddingLeft: wp('5%')
     }
   });
   export default examRoutineStyles

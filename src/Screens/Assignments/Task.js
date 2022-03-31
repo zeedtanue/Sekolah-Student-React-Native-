@@ -5,9 +5,13 @@ import LogoWithTitle from '../../Components/Headers/LogoWithTitle'
 import CardWithButton from '../../Components/Card/CardWithButton'
 import axios from 'axios'
 import { UserContext } from '../../Utilities/UserContext'
+import { Spinner } from 'native-base'
+
 
 export default function Task({navigation}) {
   const user = useContext(UserContext )
+  const [loading, setLoading] = useState(false)
+
   const taskGetFunc = async () => {
     const config = {
       method: 'get',
@@ -18,12 +22,14 @@ export default function Task({navigation}) {
     };
 
     try {
+      setLoading(true)
       const homework = await axios(config)
       const {data} = homework.data
       setTasks([...data])
+      setLoading(false)
       console.log(data)
     } catch (error) {
-      
+      setLoading(false)
     }
 
 
@@ -41,6 +47,10 @@ export default function Task({navigation}) {
       </View>
       <Text style={taskStyles.textTitle}>Task</Text>
       <ScrollView>
+      {loading? 
+            <Spinner style={{ justifyContent:'center', alignSelf:'center' }} size="lg"/>:null  
+           }
+      {tasks.length === 0 ? <Text style={taskStyles.emptyArray}>No Assignments/ Homework Yet</Text>: null}
       {tasks.map((item) => 
       <View style={taskStyles.cardContainer} key={item.id}>
         <CardWithButton

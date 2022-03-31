@@ -63,6 +63,7 @@ export function useAuth() {
             email: info.email,
             studentId: data.data.user.id,
             rollNo: info.roll_no,
+            classId: info.class_id,
             className: info.class_name,
             sectionName: info.section_name,
             guardianName: info.guardians_name,

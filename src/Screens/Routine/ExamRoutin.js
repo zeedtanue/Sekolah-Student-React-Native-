@@ -1,24 +1,43 @@
-import React, { useState } from 'react'
-import { ScrollView, Text, View } from 'react-native'
+import React, { useState, useContext, useEffect } from 'react'
+import { ScrollView, Text, View, TouchableOpacity} from 'react-native'
 import LogoWithTitle from '../../Components/Headers/LogoWithTitle'
-import { Table, Row, Rows } from 'react-native-table-component'
-
+import { UserContext } from '../../Utilities/UserContext'
+import { Spinner } from 'native-base'
 import examRoutineStyles from './ExamRoutin.Styles'
-const ExamRoutine = () => {
-  const [tableData, setTableData] = useState({
-    tableHead: ['Class', 'Exam Term', 'Subject', 'Date', 'Time', 'Room\nNo'],
-      tableData: [
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ],
-        ['One', 'Special Exam', 'Physical Education', '2022-01-07', '10:30 AM - 11:30 AM', '114' ]
-      ]
-  })
+import axios from 'axios'
+const ExamRoutine = ({ navigation }) => {
+  const user = useContext(UserContext)
+  const [loading, setLoading] = useState(false)
+  const [examList, setExamList] = useState([])
+  const getData = async() => {
+    const config = {
+      method: 'get',
+      url: `${user.base_url}api/exam-list/${user.studentId}`,
+      headers: { 
+        'Authorization': user.token
+      }
+    };
+  try {
+    setLoading(true)
+    const {data} = await axios(config)
+    console.log(data)
+    setExamList([...data.data])
+    setLoading(false)
+  } catch (error) {
+    setLoading(false)
+    console.log(error)
+    
+  }
+  }
+  
+
+  useEffect(() => {
+    getData()
+  }, [])
+  
+
+
+  
   return (
       <View style={examRoutineStyles.container}>
         <View style={examRoutineStyles.title}>
@@ -30,10 +49,22 @@ const ExamRoutine = () => {
         </Text>
         <ScrollView >
         <View style={examRoutineStyles.tableContainer}> 
-          <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
+        {loading? 
+            <Spinner style={{ justifyContent:'center', alignSelf:'center' }} size="lg"/>:null  
+           }
+        {examList.map(item=> 
+          <TouchableOpacity key={item.exam_id}
+            style={examRoutineStyles.buttonList}
+            onPress={()=> navigation.navigate('ExamRoutinDetails', item )}
+            >
+            <Text style={examRoutineStyles.buttonText}>{item.exam_name}</Text>
+          </TouchableOpacity>
+          )}
+          
+          {/* <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
             <Row data={tableData.tableHead} style={examRoutineStyles.tableHead} textStyle={examRoutineStyles.tableHeadText}/>
             <Rows data={tableData.tableData} textStyle={examRoutineStyles.rowText}/>
-          </Table>
+          </Table> */}
 
         </View>
         </ScrollView>

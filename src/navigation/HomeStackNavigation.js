@@ -18,6 +18,7 @@ import Accounts from "../Screens/Accounts/Accounts";
 import AccountsDetails from "../Screens/Accounts/AccountsDetails";
 import NoticeDetails from "../Screens/Notice/NoticeDetails";
 import SyllabusDetails from "../Screens/Syllabus/SyllabusDetails";
+import ExamRoutinDetails from "../Screens/Routine/ExamRoutinDetails";
 const { Navigator, Screen } = createNativeStackNavigator()
 const HomeStackNavigation = () => {
     
@@ -42,6 +43,8 @@ const HomeStackNavigation = () => {
             <Screen name="AccountsDetails" component={AccountsDetails}/>
             <Screen name="NoticeDetails" component={NoticeDetails}/>
             <Screen name="SyllabusDetails" component={SyllabusDetails}/>
+            <Screen name="ExamRoutinDetails" component={ExamRoutinDetails}/>
+
         </Navigator>
     )
 }
