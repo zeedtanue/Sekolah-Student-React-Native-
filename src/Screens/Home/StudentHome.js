@@ -28,6 +28,9 @@ const StudentHome = ({ navigation }) => {
     const noticeRoute = () => {
       navigation.navigate('Notice')
     }
+    const attendanceRoute = () => {
+      navigation.navigate('AttendanceHome')
+    }
     
     const [noticeList, setNoticeList] = useState([])
 
@@ -105,12 +108,22 @@ const StudentHome = ({ navigation }) => {
                       title="Class Routine"
                       onPress={classRoutineFunc}
                       />
+                    {user.userRole === 'student'? 
+
                     <RectangleButton
                       background="primary" 
                       icon={require('../../../assets/timetable-icon.png')}
                       title="Exam Routine"
                       onPress={examRoutine}
+                      />:
+                      <RectangleButton
+                      background="primary" 
+                      icon={require('../../../assets/timetable-icon.png')}
+                      title="Attendance"
+                      onPress={attendanceRoute}
                       />
+
+                    }
                 </View>
                 <View style={studentHomeStyles.buttonContainer}>
                     <RectangleButton
@@ -132,6 +145,16 @@ const StudentHome = ({ navigation }) => {
                       title="Accounts"
                       onPress={()=> navigation.navigate('Accounts')}
                       />
+                    {user.userRole === 'guardian'? 
+                      <RectangleButton
+                      background="primary" 
+                      icon={require('../../../assets/timetable-icon.png')}
+                      title="Exam Routine"
+                      onPress={examRoutine}
+                      />:
+                      null
+                    }
+                      
                 </View>
             </ScrollView>
         </TopBlue>

@@ -2,7 +2,6 @@ import { StatusBar } from "expo-status-bar";
 import React from "react";
 import { View, Text, ScrollView, TextInput } from "react-native";
 import LogoWithTitle from "../../Components/Headers/LogoWithTitle";
-import SearchInput from "../../Components/Inputs/SearchInput";
 import messageHomeStyles from "./MessageHome.Styles";
 
 const MessageHome = ({ navigation }) => {
